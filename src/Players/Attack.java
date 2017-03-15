@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * Created by Marley on 3/14/2017.
+ * @ authors: Alexandria Southern, Mike Bastian, and Marley Powers
+ *
+ * CS 222 - S2 David Largent
+ *
+ * This class initiates countries attack moves.
  */
 public class Attack {
     private String nameOfAttack;

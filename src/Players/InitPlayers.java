@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 /**
- * @ authors: Alexandria Southern and Marley Powers
+ * @ authors: Alexandria Southern, Mike Bastian, and Marley Powers
  *
  * CS 222 - S2 David Largent
  *
@@ -67,7 +67,7 @@ public class InitPlayers {
         String cons = "The United States can only attack every other turn but when they do the attacks are devastating to the enemy";
 
         //20pts total distributed
-        int health = 0;     //pop 318.3 million;
+        int health = 0;     //population 318.3 million;
         int stamina = 0;
         int money = 0;      //US Dollar
         int attack = 0;
@@ -79,24 +79,25 @@ public class InitPlayers {
         countryAttacks.add(Nuke());           //attack: power: resources:
         countryAttacks = new ArrayList<>(Array.asList(Troops(), Drones(), Warship(), Nuke()));
 */
-        return new InitPlayers(country, leader, pros, cons, description, government, health,stamina,money,attack); //, countryAttacks
+        return new InitPlayers(country, leader, cons, pros, description, government, health,stamina,money,attack); //, countryAttacks
 
     }
 
 
-/*
-    public static void russiaInit(){
-        country = "Russia, Moscow";
-        leader = "Vladimir Putin (2012)";
-        government = "Semi-Presidential Republic";
-        description = "Russia is the worlds largest nation and is the third-largest producer of oil.";
-        pros = "Slow population increase over time";
-        cons = "Lacking resources";
-        health = 0;     //population 143.5 million
-        stamina = 0;
-        money = 0;      //Russian Ruble
-        attack = 0;
 
+    public static InitPlayers russiaInit(){
+        String country = "Russia, Moscow";
+        String leader = "Vladimir Putin";// (2012)
+        String government = "Semi-Presidential Republic";
+        String description = "Russia is the worlds largest nation and is the third-largest producer of oil.";
+        String pros = "Slow population increase over time";
+        String cons = "Lacking resources";
+
+        int health = 0;     //population 143.5 million
+        int stamina = 0;
+        int money = 0;      //Russian Ruble
+        int attack = 0;
+/*
         //ArrayList<Attack> countryAttacks = new ArrayList<>();
         countryAttacks.add(Spy());            //attack: power: resources:
         countryAttacks.add(BearAttacks());    //attack: power: resources:
@@ -104,87 +105,88 @@ public class InitPlayers {
         countryAttacks.add(Cold War());       //attack: power: resources:
         ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(Spy(), BearAttacks(), Hacking(), ColdWar()));
         return new russiaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-
-    }
-
-
-    public static void somaliaInit(){
-        country = "Somalia, Mogadishu";
-        leader = "Mohamed Abdullahi Mohamed";
-        government = "Semi-Presidential Republic";
-        description = "Although Somalia does not condone the acts of the pirates that hijack and steal in the Indian Ocean it is important to note that they are a strong force.";
-        pros = "Harder to hit, 55% chance of getting hit.";
-        cons = "Low health";
-        health = 0;     //population 10.5 million
-        stamina = 0;
-        money = 0;      //Somali Shilling
-        attack = 0;
-
-        //ArrayList<Attack> countryAttacks = new ArrayList<>();
-        countryAttacks.add(BoardShips);        //attack: power: resources:
-        countryAttacks.add(Cannon);             //attack: power: resources:
-        countryAttacks.add(Scurvy);             //attack: power: resources:
-        countryAttacks.add(DavyJonesLocker);  //attack: power: resources:
-        ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(BoardShips(), Cannon(), Scurvy(), DavyJonesLocker()));
-        return new somaliaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-    }
-
-
-    public static void southKoreaInit(){
-        country = "South Korea, Seoul";
-        leader = "Pending";     //Prime minister Acting President Hwang Kyo-ahn
-        government = "Democratic Republic";
-        description = "In 1945 after the end of World War II South Korea split from North Korea and now has a booming economy and a tense relation with those in the North.";
-        pros = "Critical chance to hit";
-        cons = "More likely to be affected by world events.";
-        health = 0;             // Population 50.22 million
-        stamina = 0;
-        money = 0;              //South Korean Won
-        attack = 0;
-
-        //ArrayList<Attack> countryAttacks = new ArrayList<>();
-        countryAttacks.add(Robots); //attack: power: resources:
-        countryAttacks.add(BiggerRobots); //attack: power: resources:
-        countryAttacks.add(SuperBigRobots); //attack: power: resources:
-        countryAttacks.add(MegaBigRobots); //attack: power: resources:
-        ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(Robots(), BiggerRobots(), SuperBigRobots(), MegaBigRobots()));
-        return new southKoreaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-    }
-
-
-    public static void penguinInit(){
-        country = "Antarctica";
-        leader = "Emperor Penguin";
-        government = "Totalitarian State";
-        description = "Antarctica is not claimed by any country and resides on the south pole.";
-        pros = "You are a penguin";
-        cons = "Global Warming is slowly killing your species. Damage taken every turn.";
-        health = 0;         // 100 million penguins
-        stamina = 0;
-        money = 0;          //Fish
-        attack = 0;
-
-        //ArrayList<Attack> countryAttacks = new ArrayList<>();
-        countryAttacks.add(HappyFeet);             //attack: power: resources:
-        countryAttacks.add(Fishing);                //attack: power: resources:
-        countryAttacks.add(WinterStorm);           //attack: power: resources:
-        countryAttacks.add(MarchofthePenguins);  //attack: power: resources:
-        ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(HappyFeet(), Fishing(), WinterStorm(), MarchofthePenguins()));
-        return new penguinInt(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-    }
-
-    //public ArrayList<Attacks> getCountryAttacks(){
-        //return this.countryAttacks;
-    //}
-
-
 */
+        return new InitPlayers(country, leader, cons, pros, description, government, health,stamina,money,attack);//, countryAttacks
+    }
+
+    /*
+        public static void somaliaInit(){
+            country = "Somalia, Mogadishu";
+            leader = "Mohamed Abdullahi Mohamed";
+            government = "Semi-Presidential Republic";
+            description = "Although Somalia does not condone the acts of the pirates that hijack and steal in the Indian Ocean it is important to note that they are a strong force.";
+            pros = "Harder to hit, 55% chance of getting hit.";
+            cons = "Low health";
+            health = 0;     //population 10.5 million
+            stamina = 0;
+            money = 0;      //Somali Shilling
+            attack = 0;
+
+            //ArrayList<Attack> countryAttacks = new ArrayList<>();
+            countryAttacks.add(BoardShips);        //attack: power: resources:
+            countryAttacks.add(Cannon);             //attack: power: resources:
+            countryAttacks.add(Scurvy);             //attack: power: resources:
+            countryAttacks.add(DavyJonesLocker);  //attack: power: resources:
+            ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(BoardShips(), Cannon(), Scurvy(), DavyJonesLocker()));
+            return new somaliaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+        }
+
+
+        public static void southKoreaInit(){
+            country = "South Korea, Seoul";
+            leader = "Pending";     //Prime minister Acting President Hwang Kyo-ahn
+            government = "Democratic Republic";
+            description = "In 1945 after the end of World War II South Korea split from North Korea and now has a booming economy and a tense relation with those in the North.";
+            pros = "Critical chance to hit";
+            cons = "More likely to be affected by world events.";
+            health = 0;             // Population 50.22 million
+            stamina = 0;
+            money = 0;              //South Korean Won
+            attack = 0;
+
+            //ArrayList<Attack> countryAttacks = new ArrayList<>();
+            countryAttacks.add(Robots); //attack: power: resources:
+            countryAttacks.add(BiggerRobots); //attack: power: resources:
+            countryAttacks.add(SuperBigRobots); //attack: power: resources:
+            countryAttacks.add(MegaBigRobots); //attack: power: resources:
+            ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(Robots(), BiggerRobots(), SuperBigRobots(), MegaBigRobots()));
+            return new southKoreaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+        }
+
+
+        public static void penguinInit(){
+            country = "Antarctica";
+            leader = "Emperor Penguin";
+            government = "Totalitarian State";
+            description = "Antarctica is not claimed by any country and resides on the south pole.";
+            pros = "You are a penguin";
+            cons = "Global Warming is slowly killing your species. Damage taken every turn.";
+            health = 0;         // 100 million penguins
+            stamina = 0;
+            money = 0;          //Fish
+            attack = 0;
+
+            //ArrayList<Attack> countryAttacks = new ArrayList<>();
+            countryAttacks.add(HappyFeet);             //attack: power: resources:
+            countryAttacks.add(Fishing);                //attack: power: resources:
+            countryAttacks.add(WinterStorm);           //attack: power: resources:
+            countryAttacks.add(MarchofthePenguins);  //attack: power: resources:
+            ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(HappyFeet(), Fishing(), WinterStorm(), MarchofthePenguins()));
+            return new penguinInt(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+        }
+
+        //public ArrayList<Attacks> getCountryAttacks(){
+            //return this.countryAttacks;
+        //}
+
+
+    */
     public String getCountry(){return this.country;}
     public String getLeader(){return this.leader;}
     public String getDescription(){return this.description;}
     public String getGovType(){return this.government;}
-    public String getPros(){return this.pros;}
-    public String getCons(){return this.cons;}
+    public String getPros(){return this.booster;}
+    public String getCons(){return this.drawback;}
     public int getHealth(){return this.health;}
     public int getStamina(){return this.stamina;}
     public int getMoney(){return this.money;}

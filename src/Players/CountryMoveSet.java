@@ -1,7 +1,11 @@
 package Players;
 
 /**
- * Created by Marley on 3/14/2017.
+ * @ authors: Alexandria Southern, Mike Bastian, and Marley Powers
+ *
+ * CS 222 - S2 David Largent
+ *
+ * This class houses all of a countries attack moves.
  */
 public class CountryMoveSet {
     static int moveAttackDamage;

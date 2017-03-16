@@ -1,5 +1,7 @@
 package Players;
 
+import com.sun.org.apache.xml.internal.security.Init;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
@@ -109,78 +111,79 @@ public class InitPlayers {
         return new InitPlayers(country, leader, cons, pros, description, government, health,stamina,money,attack);//, countryAttacks
     }
 
-    /*
-        public static void somaliaInit(){
-            country = "Somalia, Mogadishu";
-            leader = "Mohamed Abdullahi Mohamed";
-            government = "Semi-Presidential Republic";
-            description = "Although Somalia does not condone the acts of the pirates that hijack and steal in the Indian Ocean it is important to note that they are a strong force.";
-            pros = "Harder to hit, 55% chance of getting hit.";
-            cons = "Low health";
-            health = 0;     //population 10.5 million
-            stamina = 0;
-            money = 0;      //Somali Shilling
-            attack = 0;
 
+        public static InitPlayers somaliaInit(){
+            String country = "Somalia, Mogadishu";
+            String leader = "Mohamed Abdullahi Mohamed";
+            String government = "Semi-Presidential Republic";
+            String description = "Although Somalia does not condone the acts of the pirates that hijack and steal in the Indian Ocean it is important to note that they are a strong force.";
+            String pros = "Harder to hit, 55% chance of getting hit.";
+            String cons = "Low health";
+            int health = 0;     //population 10.5 million
+            int stamina = 0;
+            int money = 0;      //Somali Shilling
+            int attack = 0;
+/*
             //ArrayList<Attack> countryAttacks = new ArrayList<>();
             countryAttacks.add(BoardShips);        //attack: power: resources:
             countryAttacks.add(Cannon);             //attack: power: resources:
             countryAttacks.add(Scurvy);             //attack: power: resources:
             countryAttacks.add(DavyJonesLocker);  //attack: power: resources:
             ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(BoardShips(), Cannon(), Scurvy(), DavyJonesLocker()));
-            return new somaliaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+           */
+            return new InitPlayers(country, leader, cons, pros, description, government, health,stamina,money,attack);//, countryAttacks
         }
 
+    /*
+            public static void southKoreaInit(){
+                country = "South Korea, Seoul";
+                leader = "Pending";     //Prime minister Acting President Hwang Kyo-ahn
+                government = "Democratic Republic";
+                description = "In 1945 after the end of World War II South Korea split from North Korea and now has a booming economy and a tense relation with those in the North.";
+                pros = "Critical chance to hit";
+                cons = "More likely to be affected by world events.";
+                health = 0;             // Population 50.22 million
+                stamina = 0;
+                money = 0;              //South Korean Won
+                attack = 0;
 
-        public static void southKoreaInit(){
-            country = "South Korea, Seoul";
-            leader = "Pending";     //Prime minister Acting President Hwang Kyo-ahn
-            government = "Democratic Republic";
-            description = "In 1945 after the end of World War II South Korea split from North Korea and now has a booming economy and a tense relation with those in the North.";
-            pros = "Critical chance to hit";
-            cons = "More likely to be affected by world events.";
-            health = 0;             // Population 50.22 million
-            stamina = 0;
-            money = 0;              //South Korean Won
-            attack = 0;
-
-            //ArrayList<Attack> countryAttacks = new ArrayList<>();
-            countryAttacks.add(Robots); //attack: power: resources:
-            countryAttacks.add(BiggerRobots); //attack: power: resources:
-            countryAttacks.add(SuperBigRobots); //attack: power: resources:
-            countryAttacks.add(MegaBigRobots); //attack: power: resources:
-            ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(Robots(), BiggerRobots(), SuperBigRobots(), MegaBigRobots()));
-            return new southKoreaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-        }
-
-
-        public static void penguinInit(){
-            country = "Antarctica";
-            leader = "Emperor Penguin";
-            government = "Totalitarian State";
-            description = "Antarctica is not claimed by any country and resides on the south pole.";
-            pros = "You are a penguin";
-            cons = "Global Warming is slowly killing your species. Damage taken every turn.";
-            health = 0;         // 100 million penguins
-            stamina = 0;
-            money = 0;          //Fish
-            attack = 0;
-
-            //ArrayList<Attack> countryAttacks = new ArrayList<>();
-            countryAttacks.add(HappyFeet);             //attack: power: resources:
-            countryAttacks.add(Fishing);                //attack: power: resources:
-            countryAttacks.add(WinterStorm);           //attack: power: resources:
-            countryAttacks.add(MarchofthePenguins);  //attack: power: resources:
-            ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(HappyFeet(), Fishing(), WinterStorm(), MarchofthePenguins()));
-            return new penguinInt(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
-        }
-
-        //public ArrayList<Attacks> getCountryAttacks(){
-            //return this.countryAttacks;
-        //}
+                //ArrayList<Attack> countryAttacks = new ArrayList<>();
+                countryAttacks.add(Robots); //attack: power: resources:
+                countryAttacks.add(BiggerRobots); //attack: power: resources:
+                countryAttacks.add(SuperBigRobots); //attack: power: resources:
+                countryAttacks.add(MegaBigRobots); //attack: power: resources:
+                ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(Robots(), BiggerRobots(), SuperBigRobots(), MegaBigRobots()));
+                return new southKoreaInit(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+            }
 
 
-    */
+            public static void penguinInit(){
+                country = "Antarctica";
+                leader = "Emperor Penguin";
+                government = "Totalitarian State";
+                description = "Antarctica is not claimed by any country and resides on the south pole.";
+                pros = "You are a penguin";
+                cons = "Global Warming is slowly killing your species. Damage taken every turn.";
+                health = 0;         // 100 million penguins
+                stamina = 0;
+                money = 0;          //Fish
+                attack = 0;
+
+                //ArrayList<Attack> countryAttacks = new ArrayList<>();
+                countryAttacks.add(HappyFeet);             //attack: power: resources:
+                countryAttacks.add(Fishing);                //attack: power: resources:
+                countryAttacks.add(WinterStorm);           //attack: power: resources:
+                countryAttacks.add(MarchofthePenguins);  //attack: power: resources:
+                ArrayList<Attack> countryAttacks = new ArrayList<>(Arrays.asList(HappyFeet(), Fishing(), WinterStorm(), MarchofthePenguins()));
+                return new penguinInt(country, leader, government, description, pros, cons,  health, stamina, money, attack, countryAttacks);
+            }
+
+            //public ArrayList<Attacks> getCountryAttacks(){
+                //return this.countryAttacks;
+            //}
+
+
+        */
     public String getCountry(){return this.country;}
     public String getLeader(){return this.leader;}
     public String getDescription(){return this.description;}

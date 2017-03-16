@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import static Players.InitPlayers.USAInit;
 import static Players.InitPlayers.russiaInit;
+import static Players.InitPlayers.somaliaInit;
 
 
 /**
@@ -22,7 +23,7 @@ public class TestPlayerData {
     public void initialize(){
         USAInit();
         russiaInit();
-        //somaliaInit();
+        somaliaInit();
         //southKoreaInit();
         //penguinsInit();
     }
@@ -88,25 +89,35 @@ public class TestPlayerData {
     @Test
     public void russiaMoneyTest(){
         Assert.assertEquals(0,russiaInit().getMoney());}
-/*
+///////////////////////////////////////////////////SOMALIA///////////////////////////////////////////////////
 
-    @Test
-    public void USANoInitTest(){
-        Assert.assertEquals("Donald Trump",getLeader());
-    }
-
-    @Test
-    public void southKoreaPlayerTest(){
-
-    }
     @Test
     public void somaliaPlayerTest(){
-
-    }
-
+        Assert.assertEquals("Mohamed Abdullahi Mohamed",somaliaInit().getLeader());}
     @Test
-    public void penguinsPlayerTest(){
+    public void somaliaGovTest(){
+        Assert.assertEquals("Semi-Presidential Republic",somaliaInit().getGovType());}
+    @Test
+    public void somaliaDescriptionTest(){
+        Assert.assertEquals("Although Somalia does not condone the acts of the pirates that hijack and steal in the Indian Ocean it is important to note that they are a strong force.",somaliaInit().getDescription());}
+    @Test
+    public void somaliaProsTest(){
+        Assert.assertEquals("Harder to hit, 55% chance of getting hit.",somaliaInit().getPros());}
+    @Test
+    public void somaliaConsTest(){
+        Assert.assertEquals("Low health",somaliaInit().getCons());}
+    @Test
+    public void somaliaHealthTest(){
+        Assert.assertEquals(0,somaliaInit().getHealth());}
+    @Test
+    public void somaliaStaminaTest(){
+        Assert.assertEquals(0,somaliaInit().getStamina());}
+    @Test
+    public void somaliaAttackTest(){
+        Assert.assertEquals(0,somaliaInit().getAttack());}
+    @Test
+    public void somaliaMoneyTest(){
+        Assert.assertEquals(0,somaliaInit().getMoney());}
+///////////////////////////////////////////////////SOUTH KOREA///////////////////////////////////////////////////
 
-    }
-    */
 }
